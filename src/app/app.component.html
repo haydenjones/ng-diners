@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>
+    Serial Diners Agenda: {{ title }}!
+  </h3>
+</div>
+<hr/>
+<br/>Date: {{ date }}
+<br/>Name: {{ name }}
+<br/>Address: {{ address }}
+<hr/>
+<button (click)="onPrevious()">&lt;&lt;</button>
+<input value="{{ index }}" />
+<button (click)="onNext()">&gt;&gt;</button>

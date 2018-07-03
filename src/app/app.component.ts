@@ -21,17 +21,32 @@ export class AppComponent {
       this.agenda = [
              {
                  name: "Alpha",
-                 date: "2018-07-01";
+                 date: "2018-06-30",
                  address: "4968 Yonge St"
              },
              {
                  name: "Beta",
-                 date: "2018-07-02";
+                 date: "2018-07-06",
                  address: "119 Doris Ave"
+             },
+             {
+                 name: "Gamma",
+                 date: "2018-07-13",
+                 address: "107 27th Street"
              }
       ];
       
-      this.index = 0;
+      var i : number = 0;
+      var today = new Date().toISOString().slice(0, 10);
+      console.log(today);
+    
+      for (; i<this.agenda.length; i++) {
+        if (today <= this.agenda[i].date) {
+          this.index = i;
+          break;
+        }
+      }
+    
       this.update(this.index);
   }
   
@@ -46,11 +61,13 @@ export class AppComponent {
   onNavigate(nextPrevious: boolean) {
       console.log('navigate ' + nextPrevious);
       this.index = this.index + (nextPrevious ? 1 : -1);
-      this.name = this.agenda[this.index].name;
-      this.address = this.agenda[this.index].address;
+      this.update(this.index);
   }
   
   update(index: number) {
       console.log(index);
+      this.name = this.agenda[this.index].name;
+      this.address = this.agenda[this.index].address;
+      this.date = this.agenda[this.index].date;
   }
 }

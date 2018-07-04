@@ -16,15 +16,10 @@
 			<a href="https://www.google.ca/maps/search/{{ address }},+Toronto,+ON">{{ address }}</a>
 		</div>
 	</div>
+	
 	<div class="row">
-		<div class="col-sm-2">
-<button (click)="onPrevious()">&lt;&lt;</button>
-		</div>
-		<div class="col-sm-8">
-<input value="{{ index }}" />
-		</div>
-		<div class="col-sm-2">
-<button (click)="onNext()">&gt;&gt;</button>
-		</div>
+		<div class="col-sm-2"><button (click)="onPrevious()">&lt;&lt;</button></div>
+		<div class="col-sm-8">{{ index }}</div>
+		<div class="col-sm-2"><button (click)="onNext()">&gt;&gt;</button></div>
 	</div>
 </div>

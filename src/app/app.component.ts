@@ -12,29 +12,35 @@ export class AppComponent {
   
   // Current Restaurant
   date = new Date();
-  name = '107';
-  address = '27th Street';
+  name = '';
+  address = '';
+  directions = '';
+  phone = '';
+  notice = '';
+  ed_note = '';
   
   ngOnInit() { 
       console.log('ngOnItit says Hi');
       
       this.agenda = [
-             {
-                 name: "Alpha",
-                 date: "2018-06-30",
-                 address: "4968 Yonge St"
-             },
-             {
-                 name: "Beta",
-                 date: "2018-07-06",
-                 address: "119 Doris Ave"
-             },
-             {
-                 name: "Gamma",
-                 date: "2018-07-13",
-                 address: "107 27th Street"
-             }
-      ];
+  {  
+      "date":"2018-07-06",
+      "name":"Okkaido Sushi",
+      "address":"245 Eglinton Ave. East",
+      "directions":"at Mt. Pleasant Rd.: take 34, 51, 54, or 56 bus E from Eglinton Station",
+      "phone":"416-483-6848",
+      "notice":"NOTICE !!!",
+      "ed_note":""
+   },
+   {  
+      "date":"2018-07-13",
+      "name":"Okonomi House Restaurant",
+      "address":"23 Charles St. West",
+      "directions":"just W of Yonge, 1 stoplight S of Bloor: walk S from Bloor/Yonge Station",
+      "phone":"416-925-6176",
+      "notice":"",
+      "ed_note":"note by editor"
+   }      ];
       
       var i : number = 0;
       var today = new Date().toISOString().slice(0, 10);
@@ -69,5 +75,9 @@ export class AppComponent {
       this.name = this.agenda[this.index].name;
       this.address = this.agenda[this.index].address;
       this.date = this.agenda[this.index].date;
+      this.directions = this.agenda[this.index].directions;
+      this.phone = this.agenda[this.index].phone;
+      this.notice = this.agenda[this.index].notice;
+      this.ed_note = this.agenda[this.index].ed_note;
   }
 }

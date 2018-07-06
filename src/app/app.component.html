@@ -3,6 +3,9 @@
 </div>
 <div class="container">
 	<div class="row">
+		<div class="col-sm-12">{{ notice }}</div>
+	</div>
+	<div class="row">
 		<div class="col-sm-2">Date</div>
 		<div class="col-sm-10">{{ date }}</div>
 	</div>
@@ -11,15 +14,30 @@
 		<div class="col-sm-10">{{ name }}</div>
 	</div>
 	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-10"><i>{{ ed_note }}</i></div>
+	</div>
+	<div class="row">
 		<div class="col-sm-2">Address:</div>
 		<div class="col-sm-10">
 			<a href="https://www.google.ca/maps/search/{{ address }},+Toronto,+ON">{{ address }}</a>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-sm-2">&nbsp;</div>
+		<div class="col-sm-10">({{ directions }})</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-2">Phone</div>
+		<div class="col-sm-10">{{ phone }}</div>
+	</div>
 	
 	<div class="row">
+		<div class="col-sm-12">&nbsp;</div>
+	</div>
+	<div class="row">
 		<div class="col-sm-2"><button (click)="onPrevious()">&lt;&lt;</button></div>
-		<div class="col-sm-8">{{ index }}</div>
+		<div class="col-sm-8"><!-- {{ index }} --></div>
 		<div class="col-sm-2"><button (click)="onNext()">&gt;&gt;</button></div>
 	</div>
 </div>
